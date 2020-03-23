@@ -1,6 +1,3 @@
-import exam1
-
-
 class Classification:
     def __init__(self, classification_name, subject_array):
         self.classification_name = classification_name
