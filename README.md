@@ -8,3 +8,5 @@
 ## Development language
 
 python3.7.7
+
+lint:flake8
