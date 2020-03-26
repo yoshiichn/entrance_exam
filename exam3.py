@@ -1,11 +1,10 @@
 class ExtClassification:
-    def __init__(self, classification_name, subject_array=None):
+    def __init__(self, classification_name, previous_term_amount=0,
+                 current_period_amount=0, subject_array=None):
         self.classification_name = classification_name
-        if subject_array is None:
-            self.previous_term_amount = 0
-            self.current_period_amount = 0
-        else:
-            self.subject_array = subject_array
+        self.previous_term_amount = previous_term_amount
+        self.current_period_amount = current_period_amount
+        self.subject_array = subject_array
 
     def output_classification_data(self):
         result = self._calc_amount()

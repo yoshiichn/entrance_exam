@@ -15,13 +15,10 @@ current_assets.output_classification_data()
 current_assets.output_classification_calc_data()
 
 print("\n--- exam3 test ---")
-current_assets = exam3.ExtClassification('流動資産')
-current_assets.previous_term_amount = 7277553
-current_assets.current_period_amount = 8398467
-fixed_assets = exam3.ExtClassification('固定資産')
-fixed_assets.previous_term_amount = 1536737
-fixed_assets.current_period_amount = 2016762
+current_assets = exam3.ExtClassification('流動資産', 7277553, 8398467)
+fixed_assets = exam3.ExtClassification('固定資産', 1536737, 2016762)
 asset_division_list = [current_assets, fixed_assets]
-asset_division = exam3.ExtClassification('資産の部', asset_division_list)
+asset_division = exam3.ExtClassification('資産の部',
+                                         subject_array=asset_division_list)
 asset_division.output_classification_data()
 asset_division.output_classification_calc_data()
