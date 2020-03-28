@@ -15,10 +15,20 @@ current_assets.output_classification_data()
 current_assets.output_classification_calc_data()
 
 print("\n--- exam3 test ---")
-current_assets = exam3.ExtClassification('流動資産', 7277553, 8398467)
-fixed_assets = exam3.ExtClassification('固定資産', 1536737, 2016762)
+current_subject1 = exam1.Subject('流動資産1', 7000000, 8000000)
+current_subject2 = exam1.Subject('流動資産2', 277553, 398467)
+current_subject_list = [current_subject1, current_subject2]
+current_assets = exam3.ExtClassification('流動資産', current_subject_list)
+current_assets.output_classification_data()
+current_assets.output_classification_calc_data()
+fixed_subject1 = exam1.Subject('固定資産1', 1000000, 2000000)
+fixed_subject2 = exam1.Subject('固定資産2', 536737, 16762)
+fixed_subject_list = [fixed_subject1, fixed_subject2]
+fixed_assets = exam3.ExtClassification('固定資産', fixed_subject_list)
+fixed_assets.output_classification_data()
+fixed_assets.output_classification_calc_data()
+print('')
 asset_division_list = [current_assets, fixed_assets]
-asset_division = exam3.ExtClassification('資産の部',
-                                         subject_array=asset_division_list)
-asset_division.output_classification_data()
-asset_division.output_classification_calc_data()
+asset_division = exam3.ExtClassification('資産の部', asset_division_list)
+asset_division.ext_output_classification_data()
+asset_division.ext_output_classification_calc_data()
